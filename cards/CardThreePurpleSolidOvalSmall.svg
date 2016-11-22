@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="100">
+<g transform="scale(0.5, 0.5)">
+    <rect x="0" y="0" width="320" height="200" fill="white" />
+    <path d="M 70,100 m -35,-30 a 35,35 0 0,1 70,0 l 0,60 a 35,35 0 0,1 -70,0 Z" stroke-width="4" stroke="#201DAD" fill="#201DAD" />
+    <path d="M 160,100 m -35,-30 a 35,35 0 0,1 70,0 l 0,60 a 35,35 0 0,1 -70,0 Z" stroke-width="4" stroke="#201DAD" fill="#201DAD" />
+    <path d="M 250,100 m -35,-30 a 35,35 0 0,1 70,0 l 0,60 a 35,35 0 0,1 -70,0 Z" stroke-width="4" stroke="#201DAD" fill="#201DAD" />
+</g>
+</svg>

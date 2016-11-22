@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="100">
+<g transform="scale(0.5, 0.5)">
+    <defs>
+        <pattern id="ShadingPattern" x="0" y="0" width="320" height="12" patternUnits="userSpaceOnUse">
+            <path d="M 0,4 L 320,4 " stroke="#11B813" stroke-width="2" />
+        </pattern>
+    </defs>
+    <rect x="0" y="0" width="320" height="200" fill="white" />
+    <path d="M 70,100 m 0,-65 l 35,65 l -35,65 l -35,-65 Z" stroke-width="4" stroke="#11B813" fill="url(#ShadingPattern)" />
+    <path d="M 160,100 m 0,-65 l 35,65 l -35,65 l -35,-65 Z" stroke-width="4" stroke="#11B813" fill="url(#ShadingPattern)" />
+    <path d="M 250,100 m 0,-65 l 35,65 l -35,65 l -35,-65 Z" stroke-width="4" stroke="#11B813" fill="url(#ShadingPattern)" />
+</g>
+</svg>
