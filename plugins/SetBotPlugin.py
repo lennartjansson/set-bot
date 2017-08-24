@@ -135,17 +135,33 @@ def update_while_playing(message, model):
                     board = Set.coalesce_empty_spaces(board)
                     deck = []
 
-                return (
-                    Model._replace(
-                        model,
-                        board=board, deck=deck, can_call_sets=False,
-                    ),
-                    [
-                        chat_message(
-                            'SET called by <@{}>!'.format(message['user'])),
-                        set_board_image_upload(board),
-                    ]
-                )
+                if Set.is_game_over(board, model.deck):
+                    return (
+                        Model._replace(
+                            model,
+                            board=board, deck=[],
+                            is_playing=False, can_call_sets=False,
+                        ),
+                        [
+                            chat_message("SET called by <@{}>!".format(
+                                message['user']
+                            )), chat_message(
+                                "Game over! Type `set-bot start` to start a new game."
+                            )
+                        ]
+                    )
+                else:
+                    return (
+                        Model._replace(
+                            model,
+                            board=board, deck=deck, can_call_sets=False,
+                        ),
+                        [
+                            chat_message(
+                                'SET called by <@{}>!'.format(message['user'])),
+                            set_board_image_upload(board),
+                        ]
+                    )
 
         else:
             return (
