@@ -181,13 +181,27 @@ def update_while_playing(message, model):
             )
         else:
             board, deck = Set.deal_more_cards(model.board, model.deck)
-            return (
-                Model._replace(model, board=board, deck=deck),
-                [
-                    chat_message("Dealing more cards..."),
-                    set_board_image_upload(board),
-                ]
-            )
+            if Set.is_game_over(board, model.deck):
+                return (
+                    Model._replace(
+                        model,
+                        board=board, deck=[],
+                        is_playing=False, can_call_sets=False,
+                    ),
+                    [
+                        chat_message(
+                            "Game over! Type `set-bot start` to start a new game."
+                        )
+                    ]
+                )
+            else:
+                return (
+                    Model._replace(model, board=board, deck=deck),
+                    [
+                        chat_message("Dealing more cards..."),
+                        set_board_image_upload(board),
+                    ]
+                )
 
     return (model, [])
 
