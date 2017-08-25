@@ -135,7 +135,7 @@ def update_while_playing(message, model):
                     board = Set.coalesce_empty_spaces(board)
                     deck = []
 
-                if Set.is_game_over(board, model.deck):
+                if Set.is_game_over(board, deck):
                     return (
                         Model._replace(
                             model,
@@ -181,7 +181,7 @@ def update_while_playing(message, model):
             )
         else:
             board, deck = Set.deal_more_cards(model.board, model.deck)
-            if Set.is_game_over(board, model.deck):
+            if Set.is_game_over(board, deck):
                 return (
                     Model._replace(
                         model,
